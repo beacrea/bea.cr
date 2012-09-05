@@ -410,7 +410,7 @@ filter:alpha(opacity=5); !important;}
     #galleryWrap .galleryItem {width: 31%;}
 
     /* About */
-    #love{background-size:100%!important; padding-bottom:35%;}
+    #love{background-size:100%!important;}
 
     /* Opportunities */
     #opportunities{margin-bottom:1em;}
@@ -465,7 +465,7 @@ filter:alpha(opacity=5); !important;}
     #about{overflow:visible;}
 		.aboutImgWrapper {float:none; width:100%;}
 		#aboutItemWrap{padding:1em; text-align:center;}
-    #love {display: none;}
+    #love {background:url(../img/beasleycreative_love_mobile.png) no-repeat center center; padding-bottom: 35%;}
 
 
     /* Work */
