@@ -94,6 +94,9 @@
 				<h1 class="title">Check Out Some of Our Work.</h1>
 				<div id="workDetailWrap" class="clearfix">
 					<article class="workDetail" id="videoLabsDetail">
+
+						<!-- add code here that has a clickable button that will close the project detail, then scroll to the thumbnail that orignally opened it. -->
+						
 						<div class="detailThumbHolder">
 							<img class="thumb" src="img/work/vlabs_thumb_large.jpg">
 						</div><!-- end detailThumbHolder -->
@@ -115,20 +118,18 @@
 							<div class="embed-container">
 								<iframe	src="http://player.vimeo.com/video/39970017?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
 									</iframe>
-							</div><!-- end .embed-container 
+							</div><!-- end .embed-container -->
 						</aside>
-					</article><!-- end #videoLabs
+					</article><!-- end #videoLabs -->
 				</div><!-- end #WorkDetailWrap -->
 				<div id="galleryWrap">
 					<div id="galleryWeb" class="galleryCat clearfix">
 						<h1 class="galleryCatTitle">Web Work</h1>
 						<div id="webThumbWrap" class="thumbCont">
-							<a href="http://dev.beasleycreative.com/vlabs" target="_blank">
-								<div id="videoLabsThumb" class="galleryItem">
-									<img src="img/work/vlabs_thumb.jpg">
-									<span class="projTitle">Video Labs Redux</span>
-								</div><!-- end .galleryItem -->
-							</a>
+							<div id="videoLabsThumb" class="galleryItem">
+								<img src="img/work/vlabs_thumb.jpg">
+								<span class="projTitle">Video Labs Redux</span>
+							</div><!-- end .galleryItem -->
 							<a href="http://dev.beasleycreative.com/taplicious" target="_blank">
 								<div id="tapliciousThumb" class="galleryItem">
 									<img src="img/work/taplicious_thumb.jpg">
@@ -355,12 +356,18 @@
 			slides  :  	[ {image : 'img/header.jpg', title : 'Oh yes, that is a Nyan Cat on the phone. Good Job!'} ]
 		});
 
-		$('.thumbCont').hide();
+		$('.thumbCont, #workDetailWrap').hide();
 
 		$(".galleryCat h1").click(function() {
 			$(this).toggleClass('activeTab');
 			$(this).next('.thumbCont').slideToggle(400);
 		});
+
+		$("#videoLabsThumb").click(function() {
+			$('#workDetailWrap').slideToggle(400);
+		});
+
+		// Add code here that closes project detail window and scrolls to the thumbnail that originally triggered the detail to open.
 
     });
 
