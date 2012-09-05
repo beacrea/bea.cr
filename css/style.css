@@ -465,6 +465,8 @@ filter:alpha(opacity=5); !important;}
     #about{overflow:visible;}
 		.aboutImgWrapper {float:none; width:100%;}
 		#aboutItemWrap{padding:1em; text-align:center;}
+    #love {display: none;}
+
 
     /* Work */
     #galleryWrap .galleryItem {width: 100%;}
