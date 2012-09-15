@@ -208,7 +208,7 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Coty Beasley (coty@beasleycreative.com)
    ========================================================================== */
 /* Brand Color */
 .blue{color:#4CC0DC;}
@@ -221,7 +221,7 @@ td { vertical-align: top; }
 body{background:#000;}
 img, a img{ border:none; background:none;}
 .max-image {width:100%;}
-#container{background:url(../img/topDrop.png) top center repeat-x; margin:45% 0 0; padding-top:5px; position:relative;}
+#container{background:url(../img/topDrop.png) top center repeat-x; padding-top:5px; position:relative;}
 a, a:visited {text-decoration:none; color:#fff; background:#333; padding:0.1em 0.2em;}
 a:hover {background:#4CC0DC; color:#fff;}
 h1, h2, h3 {margin:0; padding:0;}
@@ -249,8 +249,8 @@ h1{font-size:2.5em;}
 p{font-size:1.5em; margin:0; margin-bottom:0.5em;}
 
 /* Page Animation */
-#nyan, #introBox, #supersized {opacity:0;}
-#topRider, #container {display: none;}
+#nyan, #introBox, #supersized, #container {opacity: 0;}
+#topRider {display: none;}
 
 /* Nav Menu Styles */
 #topRider{position:fixed; top:0; margin:0; width:100%;  background-color:#FDBF0F; opacity:0.95; text-align:center; z-index:999;}
@@ -268,14 +268,16 @@ img#nyan{
 	}
 
 /* Intro */
-#introBox{margin:10% 0 0 2em; color:#eee; position:fixed; top:0; z-index:-25; display:block; width:45%; max-width:1200px;}
+#introBoxWrapper {}
+#introBox{color:#eee; z-index:-25; display:block; width:80%; padding:6em 10% 0;}
+#introBoxContent {width:50%; padding:10% 0;}
 #introBox h1, #introBox h2{padding:0.2em; margin-bottom:0.2em;}
-#introBox h1{background-color:#333;}
-#introBox h2{background-color:#4CC0DC;}
+#introBox h1{font-size: 2em; background-color:#333;}
+#introBox h2{font-size:1em; background-color:#4CC0DC;}
 #introBox a{font-size:2em; font-weight:bold; display:block; width:33%; margin-top:.3em;}
+#scrollInstructions{color: #333; display:block; text-align:center; width:100%; font-weight:bold; font-size:2em; background-color:#ededed; z-index:-20; margin-bottom:0.1em; opacity:0;}
 
 /* Content Globals */
-#scrollInstructions{position:absolute; top:-2em; display:block; text-align:center; width:100%; font-weight:bold; font-size:2em; background-color:#ededed; opacity:0.5; z-index:-20;}
 #content{background:#eee; margin:0; overflow: hidden;}
 section .title {text-align:center; margin:0 0 0.5em ;}
 
@@ -396,6 +398,7 @@ filter:alpha(opacity=5); !important;}
 #supersized { position:fixed; right:0; top:0; overflow:hidden; z-index:-999; width:100%; height:100%;}
 #supersized img{ width:auto; height:auto; position:relative; outline:none; border:none; top:0; }
 
+#supersized .activeslide {padding:0;}
 #supersized a { z-index:-30; position:fixed; overflow:hidden; top:0; right:0; width:100%; height:100%; background:#111; display:block; }
 #supersized a.image-loading { background:#111 url(../img/progress.gif) no-repeat center center; width:100%; height:100%; }
 
@@ -433,7 +436,7 @@ filter:alpha(opacity=5); !important;}
     h1{font-size:1.8;}
 
     /* Intro */
-		#introBox{margin:8em 0 0 2em;}
+    #introBoxContent {width:60%;}
 		
 		/* About */
 		.aboutItem{font-size:1em;}
@@ -443,22 +446,25 @@ filter:alpha(opacity=5); !important;}
   @media only screen and (max-width: 767px) {
 		
     /* Globals */
-    body{background:url(../img/header.jpg) 35% -1%;}
-    #container{margin:50% 0 0;}
-    h1 {font-size:1.8em;}
+    body {background:#fff;}
+
+    /* Containers */
+    #container {margin-top:-10px;}
 
     /* Intro */
-		#introBox{margin:68% 0 0 2em; width:80%; position: inherit;}
-    #introBox h1{width:100%; font-size:1.75em;}
-    #introBox h2{width:100%; font-size:1.5em !important;}
-    #introBox a {width:65%;}
+    #introBoxWrapper {padding:2em 0; background:url(../img/header.jpg) 31% 53%;}
+    #introBox{width:80%; padding:0 10%;}
+    #introBoxContent{width:100%;}
+    #introBoxContent h2{font-size: 1.5em !important;}
+    #introBoxContent a{width:50%;}
+    #scrollInstructions {display: none;}
 
-    /* Nyan Animation */
+    /* Animation Tweaks */
     img#nyan{display: none;}
 		
 		/* Nav Menu */
-    #topRider{background:none; position:inherit; opacity: 1;}
-    #menu {padding:0;}
+    #topRider{position:relative; background:none; display:block; opacity: 1;}
+    #menu {padding:0; max-height: none;}
     #menu a, #menu a:visited{font-size:1.5em !important; position: inherit; color:#eee; background: #333; border-bottom: 1px solid black; display:block; padding:0.5em 0; font-size:2em;}
     #menu a:hover{opacity:1; background:#666;}
     #login{position: inherit;}

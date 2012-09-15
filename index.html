@@ -54,17 +54,19 @@
 </div><!-- end div#topRider -->
 
 <img id="nyan" src="img/nyan.gif">
-<div id="introBox">
-	<h1>Hi! We're Beasley Creative.</h1>
-	<h2>We have a whole lot of fun creating UIs for web and mobile, designing brand identities, and making a bit of print.</h2>
-	<a href="#about">Lets Get Started</a>
-</div><!-- end #introBox -->
+<div id="introBoxWrapper">
+	<div id="introBox">
+		<div id="introBoxContent">
+			<h1>Hi! We're Beasley Creative.</h1>
+			<h2>We have a whole lot of fun creating UIs for web and mobile, designing brand identities, and making a bit of print.</h2>
+			<a href="#about">Lets Get Started</a>
+		</div><!-- end #introBoxContent -->
+	</div><!-- end #introBox -->
+</div><!-- end #introBoxWrapper -->
+<span id="scrollInstructions">&darr; Let's Continue &darr;</span><!-- end #scrollInstructions -->
 
   <div id="container">
-  <span id="scrollInstructions">&darr; Let's Continue &darr;</span><!-- end #scrollInstructions -->
 	<div id="content">
-		<header>
-		</header>
 		<div id="main" role="main">
 			<section id="about">
 				<h1 class="title">Here's a Bit About Us.</h1>
@@ -302,11 +304,14 @@
 		});
 
     $(window).load(function() {
-	
-		$("#nyan, #introBox, #supersized").animate({
-		opacity: 1
-		}, 600);
-		$('#topRider, #container').delay(1200).slideDown(1000);
+		
+		$('#supersized, #container').animate({
+			opacity: 1}, 600);
+		$("#nyan, #introBox").delay(1200).animate({
+			opacity: 1}, 1200);
+		$('#scrollInstructions').delay(1200).animate({
+			opacity: 0.5}, 1200);
+		$('#topRider').slideDown(1000);
 		
 	});
 
