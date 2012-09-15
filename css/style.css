@@ -480,6 +480,7 @@ filter:alpha(opacity=5); !important;}
 
     /* Work */
     #galleryWrap .galleryItem {width: 100%;}
+    #galleryWrap h1.galleryCatTitle {font-size:1.5em;}
     .projDetailWrap {float: none; margin-right:0; width:100%;}
     .workDetail aside {float: none; width:100%;}
 
