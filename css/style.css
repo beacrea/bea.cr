@@ -447,6 +447,7 @@ filter:alpha(opacity=5); !important;}
 		
     /* Globals */
     body {background:#fff;}
+    h1 {font-size: 2em;}
 
     /* Containers */
     #container {margin-top:-10px;}
