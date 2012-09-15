@@ -443,13 +443,15 @@ filter:alpha(opacity=5); !important;}
   @media only screen and (max-width: 767px) {
 		
     /* Globals */
-    body{background:url(../img/header.jpg) 35% -8%;}
+    body{background:url(../img/header.jpg) 35% -1%;}
     #container{margin:50% 0 0;}
     h1 {font-size:1.8em;}
 
     /* Intro */
-		#introBox{margin:55% 0 0 2em; width:80%; position: inherit;}
-    #introBox h1{width:100%; font-size:32px;}
+		#introBox{margin:68% 0 0 2em; width:80%; position: inherit;}
+    #introBox h1{width:100%; font-size:1.75em;}
+    #introBox h2{width:100%; font-size:1.5em !important;}
+    #introBox a {width:65%;}
 
     /* Nyan Animation */
     img#nyan{display: none;}
