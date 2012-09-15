@@ -453,7 +453,7 @@ filter:alpha(opacity=5); !important;}
 
     /* Intro */
     #introBoxWrapper {padding:2em 0; background:url(../img/header.jpg) 31% 53%;}
-    #introBox{width:80%; padding:0 10%;}
+    #introBox{opacity:1; width:80%; padding:0 10%;}
     #introBoxContent{width:100%;}
     #introBoxContent h2{font-size: 1.5em !important;}
     #introBoxContent a{width:50%;}
