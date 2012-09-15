@@ -443,7 +443,7 @@ filter:alpha(opacity=5); !important;}
   @media only screen and (max-width: 767px) {
 		
     /* Globals */
-    body{background:url(../img/header.jpg) 35% -8% repeat-y;}
+    body{background:url(../img/header.jpg) 35% -8%;}
     #container{margin:50% 0 0;}
     h1 {font-size:1.8em;}
 
@@ -456,6 +456,7 @@ filter:alpha(opacity=5); !important;}
 		
 		/* Nav Menu */
     #topRider{background:none; position:inherit; opacity: 1;}
+    #menu {padding:0;}
     #menu a, #menu a:visited{font-size:1.5em !important; position: inherit; color:#eee; background: #333; border-bottom: 1px solid black; display:block; padding:0.5em 0; font-size:2em;}
     #menu a:hover{opacity:1; background:#666;}
     #login{position: inherit;}
